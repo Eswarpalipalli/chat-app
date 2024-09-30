@@ -1,6 +1,9 @@
+
+<div class="input">
 <input type="text" [(ngModel)]="message" (keyup)="$event.keyCode === 13 && sendMessage()">
-<button (click)="sendMessage()">SendMessage</button>
+<button (click)="sendMessage()" class="sendbtn">SendMessage</button>
+</div>
 
 <div class="messages-container" *ngFor="let mess of messageList">
-  <span>{{mess}}</span>
+  <span class="mess">{{mess}}</span>
 </div>
